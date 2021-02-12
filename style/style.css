@@ -8,6 +8,7 @@
     font-family: 'Poppins', sans-serif;
 }
 
+
 body {
     overflow-x: hidden;
 }
@@ -68,8 +69,7 @@ body {
     text-transform: uppercase;
     font-weight: 700;
     letter-spacing: 1px;
-    /* position: absolute;
-    left: 30px; */
+    
 }
 
 .banner header .toggle {
@@ -110,10 +110,13 @@ body {
 }
 
 .about .imgBx {
-    background: url('../assets/images/my/assets/window.jpg');
-    width: 50%;
+    background: url('../assets/images/cfar-500x362.jpg');
+    background-repeat: no-repeat;
+    width: 30%;
+    height: 450px;
     background-size: cover;
     background-position: center;
+    top: 100px;
 }
 
 .services {
@@ -170,7 +173,7 @@ body {
 }
 
 .technology .imgBx {
-    max-width: 250px;
+    max-width: 550px;
 }
 
 .technology .imgBx img {
@@ -245,7 +248,7 @@ body {
 }
 
 .imgBx2 {
-    background: url('../assets/images/my/assets/bg2.jpg');
+    background: url('../assets/images/Medical-van-and-team-2-500x362.jpg');
     background-size: cover;
     background-position: center;
     width: 50%;
@@ -406,4 +409,289 @@ body {
         margin-bottom: 20px;
     }
 
+}
+
+/* ********************************************************************************************************** */
+
+
+body {
+    background: #f2f2f2;
+}
+
+nav {
+    /* background: #1b1b1b; */
+    background: rgba(0,0,0, 0.1);
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+
+    padding-top: 10px;
+    position: fixed;
+    top: 0px;
+    text-align: center;
+    transition: .5s;
+}
+
+
+
+nav:after {
+    content: '';
+    clear: both;
+    display: table;
+}
+
+nav .logo {
+    float: left;
+    color: white;
+    font-size: 27px;
+    font-weight: 600;
+    line-height: 70px;
+    padding-left: 60px; 
+}
+
+#logo {
+    position: unset;
+    width: 100px;
+    height: 50px;
+}
+
+nav ul {
+    float: right;
+    list-style: none;
+    margin-right: 40px;
+    position: relative;
+}
+
+nav ul li {
+   float: left; 
+   display: inline-block;
+   /* background: #1b1b1b; */
+   /* background: rgba(0,0,0, 0.1); */
+   margin: 0 5px;
+}
+
+nav ul li a {
+    color: white;
+    color: black;
+    text-decoration: none;
+    line-height: 70px;
+    font-size: 18px;
+    padding: 0px 15px;
+}
+
+nav ul li a:hover {
+    color: cyan;
+    border-radius: 5px;
+    box-shadow: 0 0 5px #33ffff,
+    0 0 5px #66ffff;
+}
+
+nav ul ul li a:hover {
+    color: cyan;
+    box-shadow: none;
+}
+
+nav ul ul {
+    position: absolute;
+    top: 90px;
+    border-top: 3px solid cyan;
+    /* display: none; */
+    opacity: 0;
+    visibility: hidden;
+    transition: top .4s;
+}
+
+nav ul ul ul {
+    border-top: none;
+}
+
+nav ul li:hover > ul {
+    top: 70px;
+    opacity: 1;
+    visibility: visible;
+}
+
+nav ul ul li {
+    position: relative;
+    margin: 0;
+    width: 150px;
+    float: none;
+    display: list-item;
+    border-bottom: 1px solid rgba(0,0,0,0.3);
+}
+
+nav ul ul li a {
+    line-height: 50px;
+}
+
+nav ul ul ul li {
+    position: relative;
+    top: -70px;
+    left: 150px;
+}
+
+span .fa-plus {
+    margin-left: 40px;
+    font-size: 15px;
+}
+
+/* card */
+.container-card {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    padding: 50px 0;
+    /* margin: 10px; */
+    transform-style: preserve-3d;
+
+}
+
+.container-card .box {
+    position: relative;
+    width: 350px;
+    height: 450px;
+    margin: 60px 20px;
+    /* background: #000; */
+    transform-style: preserve-3d;
+}
+
+.box1 {
+    background: url('../assets/images/ER-Kirtiput-Hospital-from-website-213x136.jpg');
+    background-size: cover;
+}
+
+.box2 {
+    background: url('../assets/images/my/Charity-Navigator-2014-e1421306633533.jpg');
+    background-size: cover;
+}
+
+.box3 {
+    background: url('../assets/images/COVID-USA-news-pic-1-213x136.jpg');
+    background-size: cover;
+}
+
+.box4 {
+    background: url('../assets/images/covid-1-213x136.jpg');
+    background-size: cover;
+}
+
+.container-card .box:hover {
+    box-shadow: 0 50px 80px rgba(0, 0, 0, 0.2);
+}
+
+.container-card .box .imgBx {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.container-card .box .contentBx {
+    position: absolute;
+    top: 20%;
+    left: 50px;
+    right: 50px;
+    background: #fff;
+    transform: translateZ(20px) scaleY(0);
+    padding: 40px 25px;
+    transform-origin: top;
+    transition: 0.5s;
+    transform-style: preserve-3d;
+}
+
+.container-card .box:hover .contentBx {
+    transform: translateZ(20px) scaleY(1);
+}
+
+/* blur card */
+.container-blur {
+    position: relative;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    z-index: 1;
+}
+
+.container-blur .card {
+    position: relative;
+    width: 300px;
+    height: 420px;
+    background: #fff;
+    margin: 20px;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 15px 25px rgba(0,0,0,0.2);
+    transition: 0.5s;
+}
+
+.container-blur .card .circle {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    clip-path: circle(180px at center 0);
+    text-align: center;
+}
+
+.container-blur .card .circle h2 {
+    color: #fff;
+    font-size: 4.5em;
+    padding: 30px 0;
+}
+
+.container-blur .card .content {
+    position: absolute;
+    bottom: 10px;
+    padding: 20px;
+    text-align: center;
+}
+
+.container-blur .card .content p {
+    color: #666;
+    
+}
+
+.container-blur .card .content a {
+   position: relative;
+   display: inline-block;
+    padding: 10px 20px;
+    background: #000;
+    color: #fff;
+    border-radius: 40px;
+    text-decoration: none;
+    margin-top: 20px;
+}
+
+.container-blur .card:nth-child(1) .circle,
+.container-blur .card:nth-child(1) .content a {
+    background: #ffaf00;
+}
+
+.container-blur .card:nth-child(2) .circle,
+.container-blur .card:nth-child(2) .content a {
+    background: #da2268;
+}
+
+.container-blur .card:nth-child(3) .circle,
+.container-blur .card:nth-child(3) .content a {
+    background: #bb02ff;
+}
+
+.container-blur:hover .card {
+    filter: blur(20px);
+    transform: scale(0.9);
+    opacity: 0.5;
+}
+
+.container-blur .card:hover {
+    filter: blur(0px);
+    transform: scale(1.1);
+    opacity: 1;
 }
